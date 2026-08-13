@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NakuruFX — Professional Online Trading Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Nakuru<span>FX</span></div>
+
+    <ul class="nav-links">
+      <li><a href="#markets">Markets</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline" onclick="login()">Login</button>
+      <button class="btn btn-gold" onclick="register()">Open Account</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <div class="badge">● PROFESSIONAL TRADING PLATFORM — DEMO</div>
+      <h1>Trade the world's<br><span>financial markets.</span></h1>
+      <p>
+        A modern trading experience designed for serious traders,
+        with powerful market tools, transparent account management
+        and a professional client dashboard.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-gold" onclick="register()">Create Trading Account</button>
+        <button class="btn btn-outline" onclick="scrollToPlatform()">Explore Platform</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><h3>24/5</h3><p>Market Access</p></div>
+    <div class="stat"><h3>0.0*</h3><p>Competitive Spreads</p></div>
+    <div class="stat"><h3>50+</h3><p>Trading Instruments</p></div>
+    <div class="stat"><h3>24/7</h3><p>Account Monitoring</p></div>
+  </section>
+
+  <section class="dashboard-section" id="platform">
+    <div class="section-title">
+      <h2>Professional Trading Dashboard</h2>
+      <p>Everything your clients need in one place.</p>
+    </div>
+
+    <div class="dashboard">
+      <aside class="sidebar">
+        <div class="logo">Nakuru<span>FX</span></div>
+
+        <h4>Trading</h4>
+        <div class="side-item active">📊 Dashboard</div>
+        <div class="side-item" onclick="showDemo('Markets')">📈 Markets</div>
+        <div class="side-item" onclick="showDemo('Positions')">💼 Positions</div>
+        <div class="side-item" onclick="showDemo('Orders')">📜 Orders</div>
+
+        <h4>Account</h4>
+        <div class="side-item" onclick="scrollToWallet()">💰 Wallet</div>
+        <div class="side-item" onclick="showDemo('Transactions')">↔ Transactions</div>
+        <div class="side-item" onclick="showDemo('Profile')">👤 Profile</div>
+
+        <h4>Support</h4>
+        <div class="side-item" onclick="showDemo('Support Centre')">🎧 Support Centre</div>
+      </aside>
+
+      <main class="main-trading">
+        <div class="account">
+          <div class="account-card">
+            <small>Balance</small>
+            <strong id="balance">$25,000.00</strong>
+          </div>
+          <div class="account-card">
+            <small>Equity</small>
+            <strong id="equity">$25,248.50</strong>
+          </div>
+          <div class="account-card">
+            <small>Today's P/L</small>
+            <strong id="profit" class="green">+$248.50</strong>
+          </div>
+        </div>
+
+        <div class="chart">
+          <div class="chart-label">EUR/USD</div>
+          <div class="chart-price" id="price">1.17342 ▲</div>
+          <div class="chart-line"></div>
+        </div>
+
+        <div class="market-controls">
+          <button class="pair-btn active" onclick="selectPair('EUR/USD', 1.17342)">EUR/USD</button>
+          <button class="pair-btn" onclick="selectPair('GBP/USD', 1.36120)">GBP/USD</button>
+          <button class="pair-btn" onclick="selectPair('USD/JPY', 148.250)">USD/JPY</button>
+        </div>
+      </main>
+
+      <aside class="order-panel">
+        <h3>New Order</h3>
+
+        <div class="tabs">
+          <button id="buyTab" class="tab buy active" onclick="setSide('BUY')">BUY</button>
+          <button id="sellTab" class="tab" onclick="setSide('SELL')">SELL</button>
+        </div>
+
+        <div class="field">
+          <label>Instrument</label>
+          <input id="instrument" value="EUR/USD" readonly>
+        </div>
+
+        <div class="field">
+          <label>Volume</label>
+          <input id="volume" type="number" min="0.01" step="0.01" value="0.10">
+        </div>
+
+        <div class="field">
+          <label>Stop Loss</label>
+          <input id="stopLoss" type="text" placeholder="Optional">
+        </div>
+
+        <div class="field">
+          <label>Take Profit</label>
+          <input id="takeProfit" type="text" placeholder="Optional">
+        </div>
+
+        <button id="tradeButton" class="trade-button" onclick="demoTrade()">BUY EUR/USD</button>
+
+        <div class="risk">
+          ⚠️ DEMO ONLY: This interface does not execute real trades.
+          Forex and leveraged products involve substantial risk.
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="features" id="security">
+    <div class="section-title">
+      <h2>Built for Serious Traders</h2>
+      <p>A foundation for a professional brokerage experience.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature"><div class="feature-icon">🔐</div><h3>Secure Accounts</h3><p>Account security architecture designed for authentication, authorization and transaction controls.</p></div>
+      <div class="feature"><div class="feature-icon">💳</div><h3>Client Wallet</h3><p>Designed for deposits, withdrawals, balances, transaction history and reconciliation.</p></div>
+      <div class="feature"><div class="feature-icon">📊</div><h3>Market Intelligence</h3><p>A clean trading interface for charts, instruments, prices, positions and account information.</p></div>
+      <div class="feature"><div class="feature-icon">🪪</div><h3>KYC / AML</h3><p>Architecture ready for identity verification, compliance workflows and account review.</p></div>
+      <div class="feature"><div class="feature-icon">🛡️</div><h3>Risk Management</h3><p>Designed to connect with professional risk controls, exposure monitoring and trading limits.</p></div>
+      <div class="feature"><div class="feature-icon">🎧</div><h3>Client Support</h3><p>Give clients a dedicated support experience through tickets, notifications and account assistance.</p></div>
+    </div>
+  </section>
+
+  <section class="wallet" id="markets">
+    <div class="section-title">
+      <h2>Client Wallet</h2>
+      <p>Simple account and transaction management.</p>
+    </div>
+
+    <div class="wallet-box">
+      <div class="wallet-card">
+        <h3>Available Balance</h3>
+        <div class="balance" id="walletBalance">$25,000.00</div>
+        <div class="wallet-buttons">
+          <button class="btn btn-gold" onclick="deposit()">Deposit</button>
+          <button class="btn btn-outline" onclick="withdraw()">Withdraw</button>
+        </div>
+      </div>
+
+      <div class="wallet-card">
+        <h3>Recent Transactions</h3>
+        <p class="transaction green">+ $5,000.00 &nbsp; Deposit</p>
+        <p class="transaction red">- $750.00 &nbsp; Withdrawal</p>
+        <p class="transaction muted">$25,000.00 &nbsp; Current Balance</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="about">
+    <div class="logo">Nakuru<span>FX</span></div>
+    <p>Professional online trading platform concept.</p>
+    <p>Risk Warning: Forex and leveraged trading can result in losses exceeding your initial investment.</p>
+    <p>© 2026 NakuruFX. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

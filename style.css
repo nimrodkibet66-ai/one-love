@@ -1,0 +1,35 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07111f;--panel:#0d1b2d;--panel2:#10233a;--border:#1c3550;--text:#f5f8fc;--muted:#8ea3bb;--green:#19d38a;--red:#ff5d73;--gold:#f4c95d}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+button{cursor:pointer;border:0}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid var(--border);background:rgba(7,17,31,.95);position:sticky;top:0;z-index:20}
+.logo{font-size:25px;font-weight:800;color:#fff}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:14px}.nav-links a:hover{color:#fff}
+.nav-actions{display:flex;gap:10px}
+.btn{padding:11px 18px;border-radius:8px;font-weight:700}.btn-outline{background:transparent;border:1px solid var(--border);color:#fff}.btn-gold{background:var(--gold);color:#111}
+.hero{min-height:650px;display:grid;place-items:center;text-align:center;padding:90px 20px;background:radial-gradient(circle at 50% 20%,rgba(244,201,93,.14),transparent 35%),linear-gradient(180deg,#09172a 0%,#07111f 100%)}
+.badge{display:inline-block;padding:7px 13px;border-radius:50px;background:rgba(244,201,93,.1);border:1px solid rgba(244,201,93,.3);color:var(--gold);font-size:13px;margin-bottom:22px}
+.hero h1{max-width:900px;font-size:clamp(44px,7vw,78px);line-height:1.02;margin-bottom:25px}.hero h1 span{color:var(--gold)}
+.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:18px;line-height:1.7}
+.hero-buttons{margin-top:35px;display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);max-width:1100px;margin:-55px auto 70px;position:relative;padding:0 20px}
+.stat{background:var(--panel);border:1px solid var(--border);padding:28px;text-align:center}.stat h3{font-size:28px;color:var(--gold)}.stat p{color:var(--muted);margin-top:7px;font-size:13px}
+.dashboard-section{padding:80px 5%}.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:40px;margin-bottom:12px}.section-title p{color:var(--muted)}
+.dashboard{max-width:1250px;margin:auto;display:grid;grid-template-columns:240px 1fr 300px;min-height:650px;border:1px solid var(--border);border-radius:15px;overflow:hidden;background:var(--panel)}
+.sidebar{border-right:1px solid var(--border);padding:20px 15px}.sidebar h4{color:var(--muted);font-size:11px;text-transform:uppercase;margin:20px 10px 10px}
+.side-item{padding:13px;border-radius:8px;margin-bottom:5px;color:var(--muted);font-size:14px;cursor:pointer}.side-item.active,.side-item:hover{background:var(--panel2);color:#fff}
+.main-trading{padding:20px}.account{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:15px}.account-card{background:var(--panel2);border:1px solid var(--border);padding:15px;border-radius:9px}.account-card small{color:var(--muted)}.account-card strong{display:block;margin-top:8px;font-size:21px}
+.chart{height:390px;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:50px 50px;border:1px solid var(--border);border-radius:10px;position:relative;overflow:hidden}
+.chart-line{position:absolute;left:0;right:0;top:50%;height:180px;background:linear-gradient(135deg,transparent 0 8%,var(--green) 8% 9%,transparent 9% 18%,var(--green) 18% 19%,transparent 19% 31%,var(--green) 31% 32%,transparent 32% 44%,var(--red) 44% 45%,transparent 45% 53%,var(--green) 53% 54%,transparent 54% 65%,var(--green) 65% 66%,transparent 66% 78%,var(--red) 78% 79%,transparent 79%);transform:skewY(-7deg);opacity:.8}
+.chart-label{position:absolute;top:15px;left:15px;font-weight:700}.chart-price{position:absolute;top:42px;left:15px;color:var(--green);font-size:22px}.market-controls{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap}.pair-btn{padding:8px 12px;background:var(--panel2);color:var(--muted);border-radius:7px}.pair-btn.active{color:#111;background:var(--gold)}
+.order-panel{border-left:1px solid var(--border);padding:20px}.order-panel h3{margin-bottom:20px}.tabs{display:grid;grid-template-columns:1fr 1fr;margin-bottom:20px}.tab{padding:11px;background:var(--panel2);color:var(--muted)}.tab.buy.active{background:rgba(25,211,138,.15);color:var(--green)}.tab.sell.active{background:rgba(255,93,115,.15);color:var(--red)}
+.field{margin-bottom:15px}.field label{display:block;color:var(--muted);font-size:12px;margin-bottom:7px}.field input{width:100%;padding:12px;background:#07111f;border:1px solid var(--border);border-radius:7px;color:#fff}
+.trade-button{width:100%;padding:14px;border-radius:8px;background:var(--green);color:#07111f;font-weight:800;margin-top:10px}.trade-button.sell-mode{background:var(--red)}
+.risk{margin-top:20px;padding:13px;border-radius:8px;background:rgba(255,93,115,.08);color:var(--muted);font-size:11px;line-height:1.5}
+.features{padding:90px 5%;background:#091627}.feature-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:30px;border:1px solid var(--border);background:var(--panel);border-radius:12px}.feature-icon{font-size:30px;margin-bottom:18px}.feature h3{margin-bottom:10px}.feature p{color:var(--muted);line-height:1.6;font-size:14px}
+.wallet{max-width:1100px;margin:auto;padding:90px 20px}.wallet-box{display:grid;grid-template-columns:1fr 1fr;gap:20px}.wallet-card{background:var(--panel);border:1px solid var(--border);padding:30px;border-radius:12px}.wallet-card h3{margin-bottom:20px}.balance{font-size:38px;color:var(--gold);margin-bottom:20px}.wallet-buttons{display:flex;gap:10px}.transaction{margin:15px 0}.green{color:var(--green)}.red{color:var(--red)}.muted{color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:45px 5%;color:var(--muted);font-size:13px;text-align:center}footer p{margin-top:12px}
+@media(max-width:900px){.dashboard{grid-template-columns:1fr}.sidebar,.order-panel{border:0}.stats{grid-template-columns:repeat(2,1fr)}.feature-grid,.wallet-box{grid-template-columns:1fr}.nav-links{display:none}}
+@media(max-width:550px){.stats{grid-template-columns:1fr}.account{grid-template-columns:1fr}.hero h1{font-size:45px}}
