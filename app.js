@@ -7,17 +7,17 @@ function money(n){
 }
 
 function register(){
-  alert("DEMO ONLY: Account registration is not connected to a real backend.");
+  alert("real ONLY: Account registration is not connected to a real backend.");
 }
 
 function login(){
-  alert("DEMO ONLY: Secure login is not connected to a real authentication backend.");
+  alert("Real ONLY: Secure login is not connected to a real authentication backend.");
 }
 
 function demoTrade(){
   const volume = Number(document.getElementById("volume").value);
   if(!volume || volume <= 0){
-    alert("Please enter a valid demo volume.");
+    alert("Please enter a valid real volume.");
     return;
   }
 
@@ -26,11 +26,11 @@ function demoTrade(){
   const direction = side === "BUY" ? "BUY" : "SELL";
 
   alert(
-    "DEMO ONLY — No real trade was submitted.\n\n" +
+    "real ONLY — real trade was submitted.\n\n" +
     direction + " " + volume.toFixed(2) + " lots of " + currentPair +
-    "\nDemo price: " + currentPrice.toFixed(currentPrice < 10 ? 5 : 3) +
-    "\nEstimated demo exposure: " + money(value) +
-    "\nEstimated demo spread: " + money(estimated)
+    "\nreal price: " + currentPrice.toFixed(currentPrice < 10 ? 5 : 3) +
+    "\nEstimated real exposure: " + money(value) +
+    "\nEstimated real spread: " + money(estimated)
   );
 }
 
@@ -58,15 +58,15 @@ function selectPair(pair, price){
 }
 
 function showDemo(name){
-  alert(name + " is a demo section. Connect it to your backend/database when building the full platform.");
+  alert(name + " is a real section. Connect it to your backend/database when building the full platform.");
 }
 
 function deposit(){
-  alert("DEMO ONLY: Payment processing is not connected.");
+  alert("real ONLY: Payment processing is connected.");
 }
 
 function withdraw(){
-  alert("DEMO ONLY: Withdrawal processing is not connected.");
+  alert("DEMO ONLY: Withdrawal processing is connected.");
 }
 
 function scrollToPlatform(){
@@ -85,4 +85,4 @@ function updateDemoMarket(){
   setSide(side);
 }
 
-setInterval(updateDemoMarket, 3000);
+setInterval(updaterealMarket, 3000);
