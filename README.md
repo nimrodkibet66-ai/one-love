@@ -37,4 +37,4 @@ Open `index.html` in a browser.
 
 ## Important
 
-This is a front-end demo/prototype. It does not execute real trades, accept deposits, process withdrawals, or connect to a broker. Real financial functionality would require a secure backend, authentication, compliance controls, regulated services, and appropriate broker/payment integrations.
+This is a front-end real/prototype. It does  execute real trades, accept deposits, process withdrawals, or connect to a broker. Real financial functionality would require a secure backend, authentication, compliance controls, regulated services, and appropriate broker/payment integrations.
