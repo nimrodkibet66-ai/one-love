@@ -1,4 +1,4 @@
-# NakuruFX Demo — GitHub Pages
+# NakuruFX real — GitHub Pages
 
 A GitHub Pages-ready front-end prototype based on the NakuruFX design.
 
@@ -6,7 +6,7 @@ A GitHub Pages-ready front-end prototype based on the NakuruFX design.
 
 - `index.html` — main website
 - `style.css` — design and responsive layout
-- `app.js` — demo interactions
+- `app.js` — real interactions
 - `README.md` — setup instructions
 
 ## Features
