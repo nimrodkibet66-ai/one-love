@@ -15,12 +15,12 @@ A GitHub Pages-ready front-end prototype based on the NakuruFX design.
 - Responsive navigation
 - Trading dashboard mockup
 - Simulated BUY/SELL order panel
-- Demo wallet section
-- Demo account/login buttons
+- real wallet section
+- real account/login buttons
 - Market pair selector
 - Simulated changing EUR/USD price
 - GitHub Pages compatible
-- No real-money trading or payment processing
+  real-money trading or payment processing
 
 ## Run locally
 
